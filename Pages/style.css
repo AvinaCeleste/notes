@@ -5,14 +5,11 @@ body {
     background-color:rgb(218, 215, 241);
     color:white;
 }
-a {
-    text-decoration:none;
-}
 header {
     height:60px;
     background-color:rgb(55, 61, 95);
 }
-header h1 {
+#title {
     padding:10px;
     margin:auto;
     color:white;
@@ -46,15 +43,20 @@ h2 {
     margin:10px;
     background-color:rgb(103, 110, 150); 
 }
-#side a, p {
+#side a, #notetext {
     color:white;
     padding:10px;
     float:none;
     margin:10px;
     display:block;
     color:rgb(55, 61, 95);
-    background-color:rgb(218, 215, 241); 
+    background-color:rgb(218, 215, 241);
+    text-decoration:none;
 }
 #side a:hover {
     background-color:rgb(170, 175, 219); 
 }
+pre {
+    margin:none;
+}
+

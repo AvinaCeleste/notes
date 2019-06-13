@@ -1,25 +1,89 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>HTML Notes</title>
-</head>
-<body>
-    <header>
-        <h1>HTML Notes</h1>
-    </header>
-    <main>
-        <div id="side">
-            <h2>Links</h2>
-            <a href="#">tt</a>
-        </div>
-        <div id="notes">
-            <h2>Notes</h2>
-            <p>
-                
-            </p>
-        </div>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>HTML Notes</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="title">HTML Notes</h1>
+        </header>
+        <main>
+            <div id="side">
+                <h2>Links</h2>
+                <a href="#attrib">Attributes</a>
+                <a href="#meta">Metadata</a>
+                <a href="#">Style</a>
+                <a href="#">Metadata</a>
+                <a href="#">Metadata</a>
+                <a href="#">Metadata</a>
+            </div>
+            <div id="notes">
+                <h2>Notes</h2>
+                <div id="notetext">
+                    <p>
+                        <b>HTML</b> stands for <b>Hyper Text Markup Language</b>. Element names are surrounded by angle brakets to create tags.
+
+                        <code>&lt;tagname&gt;content goes here...&lt;/tagname&gt;</code>
+
+                        HTML tags usually come with a start tag and an end tag. The end tag is like the start tag but with a forwards slash before the element name.
+                        <br/>HTML documents must start with a document declaration.
+
+                        <code>&lt;!DOCTYPE html&gt;</code>
+
+                        The <b>html</b> tag is a container for your HTML code. The visible part of your code is contained in a <b>body</b> tag.
+
+                        <code>
+                            &lt;h1&gt;HEADER&lt;/h1&gt;
+                            <br/>&lt;p&gt;PARAGRAPH&lt;/p&gt;
+                            <br/>&lt;a href="#"&gt;LINKS&lt;/a&gt;
+                            <br/>&lt;img src="#" alt="Alternative Text"&gt;IMAGES&lt;/img&gt;
+                            <br/>&lt;button&gt;BUTTON&lt;/button&gt;
+                            <br/>&lt;ul&gt;UN-ORDERED LIST&lt;/ul&gt;
+                            <br/>&lt;ol&gt;ORDERED LIST
+                            <br/>&lt;li&gt;LIST ITEM 1&lt;/li&gt;
+                            <br/>&lt;li&gt;LIST ITEM 2&lt;/li&gt;
+                            <br/>&lt;li&gt;LIST ITEM 3&lt;/li&gt;
+                            <br/>&lt;/ol&gt;
+                            <br/>&lt;pre&gt;PREFORMATTED TEXT&lt;/pre&gt;
+                        </code>
+
+                        HTML elements can be nested within others, as seen in the ordered list example above. Elements that do not contain content are called <b>empty elements</b>.
+                        <code>&lt;b&gt;
+                            <br/>&lt;strong&gt;
+                            <br/>&lt;i&gt;
+                            <br/>&lt;em&gt;
+                            <br/>&lt;mark&gt;
+                            <br/>&lt;small&gt;
+                            <br/>&lt;del&gt;
+                            <br/>&lt;ins&gt;
+                            <br/>&lt;sub&gt;
+                            <br/>&lt;sup&gt;
+                            <br/>&lt;br/&gt;
+                        </code>
+                    </p>
+                    <h3 id="attrib">Attributes</h3>
+                    <p>
+                        Attributes provide additional information about an element. Attributes are always defined in the start tag. Using the <b>style</b> attribute, CSS elements can be used in an html document.
+
+                        <code>&lt;body style="color:blue;"&gt;&lt;/body&gt;</code>
+                    </p>
+                    <h3 id="meta">Metadata</h3>
+                    <p>
+                        Metadata is undisplayed data about the html document. It typically defines a document title, character set, stylesheets, links and other metadata.
+
+                        <code>&lt;meta charset="UTF-8"&gt;</code>
+                    </p>
+                    <h3 id=""></h3>
+                    <p>
+                        Comments in code can be written using:
+                        <code>&lt;!--THIS IS A COMMENT--&gt;</code>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+<!--<code>&lt;tag&gt;&lt;/tag&gt;</code>-->
