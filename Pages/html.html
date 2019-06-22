@@ -15,10 +15,10 @@
                 <h2>Links</h2>
                 <a href="#attrib">Attributes</a>
                 <a href="#meta">Metadata</a>
-                <a href="#">Style</a>
-                <a href="#">Metadata</a>
-                <a href="#">Metadata</a>
-                <a href="#">Metadata</a>
+                <a href="#css">Styling</a>
+                <a href="#hyper">Links</a>
+                <a href="#pics">Images</a>
+                <a href="#"></a>
             </div>
             <div id="notes">
                 <h2>Notes</h2>
@@ -29,7 +29,8 @@
                         <code>&lt;tagname&gt;content goes here...&lt;/tagname&gt;</code>
 
                         HTML tags usually come with a start tag and an end tag. The end tag is like the start tag but with a forwards slash before the element name.
-                        <br/>HTML documents must start with a document declaration.
+                        <br/><br/>
+                        HTML documents must start with a document declaration.
 
                         <code>&lt;!DOCTYPE html&gt;</code>
 
@@ -64,23 +65,114 @@
                             <br/>&lt;br/&gt;
                         </code>
                     </p>
-                    <h3 id="attrib">Attributes</h3>
-                    <p>
+                    <p id="attrib">
                         Attributes provide additional information about an element. Attributes are always defined in the start tag. Using the <b>style</b> attribute, CSS elements can be used in an html document.
 
                         <code>&lt;body style="color:blue;"&gt;&lt;/body&gt;</code>
                     </p>
-                    <h3 id="meta">Metadata</h3>
-                    <p>
+                    <p id="meta">
                         Metadata is undisplayed data about the html document. It typically defines a document title, character set, stylesheets, links and other metadata.
 
                         <code>&lt;meta charset="UTF-8"&gt;</code>
-                    </p>
-                    <h3 id=""></h3>
-                    <p>
                         Comments in code can be written using:
                         <code>&lt;!--THIS IS A COMMENT--&gt;</code>
-                    </p>
+                        <b id="css"><a href="css.html">CSS</a></b> can be used to style an HTML page. It can be added to html elements in 3 ways: <b>Inline</b>, uses a style attribute inside an html element; <b>Internal</b>, uses a <b>style</b> element in the <b>head</b> element; <b>External</b>, uses an external CSS file. <b>Id</b> and <b>class</b> attributes are included in html tags to allow individual or groups of elements to be changed by CSS in a way differently than their base tag.
+                        <br/><br/>
+                        HTML links are called <b id="hyper">hyperlinks</b>. They are defined using the <b>a</b> tag. Hyperlinks can link to website URLs or they can link to local content. The <b>target</b> attribute specifies the way a link will open: <b>_blank</b>, opens a link in a new tab; <b>_self</b>, opens link in same tab (default); <b>_parent</b>, opens link in parent frame; <b>_top</b>, opens link in full body of document; <b><i>framename</i></b>, opens link in named frame. The <b>title</b> attribute creates a tooltip that gives information to users when a link is hovered over. The <b>href</b> attribute can also be used to link to certain element's IDs.
+                        <br/><br/>
+                        Images can be added to a document using the <b id="pics">img</b> tag and the <b>src</b> attribute (used to link to the image source). The <b>alt</b> attribute is used to add an alternative text to an image should there be a loading error or if a user is using a screen reader. HTML allows .gif formats as well. The <b>picture</b> tag can hold multiple image sources that can change based on screen size:
+                        <code>&lt;picture&gt;
+                            <br/>&lt;source media="(min-width: 650px)" srcset="img_pink_flowers.jpg"&gt;
+                            <br/>&lt;source media="(min-width: 465px)" srcset="img_white_flower.jpg"&gt;
+                            <br/>&lt;img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;"&gt;
+                            <br/>&lt;/picture>
+                        </code>
+                        An HTML table is defined using the <b>table</b> tag. Inside the table tag, <b>tr</b> (table row) tags can be used. Inside table row tags, <b>td</b> (table data) or <b>th</b> (table head) tags are used, these contain the table content. Using the <b>rowspan</b> or <b>colspan</b> attribute, table content can span across multiple rows or columns. Captions can be added to the table using the <b>caption</b> tag.
+                        <br/><br/>
+                        There are two types of lists in HTML: unordered lists (<b>ul</b>) and ordered lists (<b>ol</b>). Unordered lists are marked by bullet points while ordered lists are marked by numbers. List items in both types of lists are defined using the <b>li</b> tag nested within the list parent tag. In ordered lists, the <b>type</b> attribute can be used to change the numbering method (1,A,a,I,i). By default, ordered lists will start counting at one. To start counting from a specific number, the <b>start</b> attribute can be used. HTML also supports description lists (<b>dl</b>) The <b>dt</b> tag defines the name and the <b>dd</b> defines the description of each term. Lists can be nested within other lists.
+                        <br/><br/>
+                        Each HTML element has a default display value depending on its element type. A <b>block-level</b> element always starts on a new line and takes the full width available. <b>Inline</b> elements do not start on a new line and only take up as much space as needed.
+                        <br/><br/>
+                        Classes allow multiple elements to be styled in the same way outside of their default element tag. HTML elements can have multiple classes (seperated by a space). Different types of tags can also have the same class.
+                        <br/><br/>
+                        Unlike classes, IDs can only be assigned to one element. IDs can also be used as bookmarks in a page.
+                        <br/><br/>
+                        Iframes can be used to display a webpage within a webpage. Use a <b>src</b> attribute to link the desired webpage.
+                        <br/><br/>
+                        JavaScript can be stored with <b>script</b> tags. The script tad can either hold scripting statements or a link to an external script file using the <b>src</b> attribute. The <b>noscript</b> tag allows browsers with disabled scripts to view alternate text.
+                        <br/><br/>
+                        A filepath describes a location of a file in a website's folder structure. Absolute filepaths point to another website link. Relative file paths point to a file relative to the current page (best practice).
+                        <br/><br/>
+                        The HTML head tag is a container for metadata: <b>title</b> tag, defines a title in the browser tab and search engine results; <b>style</b> tag, defines style information for a single webpage; <b>link</b> tag, links external stylesheets; <b>meta</b> tag, defines character set, page description, keywords, author, etc.; and <b>base</b>, defines a base url and base target for all relative urls.
+                        <code>
+                            &lt;meta charset="UTF-8"&gt;
+                            <br/>&lt;meta name="description" content="web tutorials"&gt;
+                            <br/>&lt;meta name="author" content="John Doe"&gt;
+                            <br/>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                            <br/>&lt;link rel="stylesheet" href="#"&gt;
+                        </code>
+                        HTML5 has semantic elements that define different parts of a webpage (<b>header, nace, section, article, aside, footer, details, summary</b>)
+                        <br/><br/>
+                        Layouts can be built in multiple ways (frameworks, floats, flexboxes or gridview)
+                        <br/><br/>
+                        Using the viewport meta tag, the browser will automatically reseize the website to the device width. Using a percentage for width, an element will take up that percentage of width relative to screen size. Text size can be set with the vw unit (viewport width).
+                        <br/><br/>
+                        Computer code elements: <b>kbd</b>, represents input for the user; <b>samp</b>, represents output from a program; <b>code</b>, defines a fragment of computer code; <b>var</b>, defines a variable.
+                        <br/><br/>
+                        Some characters are reserved in HTML such as &gt; and &lt;. To display these characters, entities must be used. Character sets define the key behing displaying text, numbers, and symbols on a computer. Entity : &lt; Entity name : &amp;lt; Entity Number : &amp;#60;
+                        <br/><br/>
+                        URL stands for <b>Uniform Resource Locator</b>. A URL is used to address a document on the web. Websites follow syntax rules:
+                        <br/><b>scheme://prefix.domain:port/path/filename</b>
+                        <br/><b>Scheme</b> - type of internet service (http / https)
+                        <br/><b>Prefix</b> - domain prefix (default = www)
+                        <br/><b>Domain</b> - internet domain name
+                        <br/><b>Port</b> - defines port number at the host
+                        <br/><b>Path</b> - path at server (default = root directory)
+                        <br/><b>Filename</b> - name of document / resource
+                        <br/><br/>
+                        There are several possible schemes: <b>http</b> (HyperText Transfer Protocol), Common and not encrypted; <b>https</b> (Secure HyperText Transfer Protocol), secure and encrypted; <b>ftp</b> (File Transfer Protocol), download and upload files; and <b>file</b>, local file.
+                        <br/><br/>
+                        XHTML is <b>Extensible HyperText Markup Language</b>. XHTML is almost identical to HTML but stricter. It is supported by all major browsers. It combines the strengths of HTML and XML. In XHTML, doctype, html, head, body and title tags are mandatory. Elements must be properly nested, closed, and in lowercase. For attributes, names must be in lowercase, values must be quoted and minimization is forbidden.
+                        <br/><br/>
+                        To collect user input <b>form</b> tags are used. The <b>input</b> tag can be displayed in several ways depending on the <b>type</b> attribute.
+                        <br/>type=
+                        <br/>"text" - one line input field for text.
+                        <br/>"radio" - multiple choice allowing one selection.
+                        <br/>"submit" - button for submitting for data to form handler.
+                        <br/><br/>
+                        There are several other ways the <b>type</b> attribute can be used: button, checkbox, color, file, image, number, range, search, time, week, date, datetime-local, email, hidden, month, password, reset, tel, and url.
+                        <br/>The <b>required</b> attribute specifies that a field must be filled out before submitting the form. The action attribute defines the action to be performed when the form is submitted. Normally form data is sent to a webpage on the server when the user clicks on the submit button. The <b>method</b> attribute specifies the http method (GET or POST) to be used when submitted: <b>GET</b>, submitted form data will be visible in the page address field (allows users to save searches); <b>POST</b>, submitted form data will not be visible in address bar (used for sensitive or personal material). Each input field must have a <b>name</b> attribute to be submitted. The <b>fieldset</b> tag is used to group related data in a form. The <b>legend</b> tag defines a caption for the fieldset tag. The <b>select</b> tag defines a drop-down list and the <b>option</b> tag (child of select) defines an option that can be selected.
+                        <code>
+                            &lt;select name="cars&gt;
+                            <br/>&lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+                            <br/>&lt;option value="audi"&gt;Audi&lt;/option&gt;
+                            <br/>&lt;/select&gt;
+                        </code>
+                        The <b>size</b> attribute specifies the number of visible values in the <b>select</b> tag. The <b>selected</b> attribute defines a preselected option. The <b>multiple</b> attribute allows users to pick multiple options.
+                        <br/><br/>
+                        The <b>textarea</b> tag defines a multi-line input field. The <b>rows</b> and <b>cols</b> attribute define the width and height of a text area.
+                        <br/><br/>
+                        A <b>datalist</b> specifies a list of pre-defined options. Users will se a drop-down list of predefined options as they input data.
+                        <br/><br/>
+                        The <b>output</b> tag represents the result of a calculation.
+                        <br/><br/>
+                        Multimedia is almost that you can see or hear. The <b>video</b> tag is the standard way to embed a video. The <b>audio</b> tag is the standard way to embed audio. 
+                        <code>
+                            &lt;video width="320" height="240" controls&gt;
+                            <br/>&lt;source src="movie.mp4" type="video/mp4"&gt;
+                            <br/>&lt;source src="movie.ogg" type="video/ogg"&gt;
+                            <br/>Your browser does not support the video tag.
+                            <br/>&lt;/video&gt;
+                            <br/><br/>&lt;audio controls&gt;
+                            <br/>&lt;source src="horse.ogg" type="audio/ogg"&gt;
+                            <br/>&lt;source src="horse.mp3" type="audio/mpeg"&gt;
+                            <br/>Your browser does not support the audio tag.
+                            <br/>&lt;/audio&gt;
+                        </code>
+                        Instead of using a <b>video</b> tag, videos from youtube can be embedded in a webpage using an iframe. 
+                        <br/><br/>
+                        When executing scripts in an HTML page, the page becomes unresponsive until the script is finished. A  webworker is JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page.
+                     </p>
                 </div>
             </div>
         </main>
